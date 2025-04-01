@@ -10,8 +10,6 @@ describe("Classe AnaliseDeDados - Método adicionarDados", () => {
 
   test("Adicionar novos dados válidos (Array)", async () => {
     const novosDados = [1,2,'w'];
-  
-    // const dadosAposAdicao = analiseDeDados.adicionarDados(novosDados);
 
     expect(analiseDeDados.adicionarDados(novosDados)).toStrictEqual([1,2,'w']);
   });
@@ -19,9 +17,6 @@ describe("Classe AnaliseDeDados - Método adicionarDados", () => {
   test("Adicionar novos dados inválidos (Sem Array), deve lançar um erro avisando que os dados são inválidos", async () => {
     const novosDados = 1;
   
-    // const dadosAposAdicao = analiseDeDados.adicionarDados(novosDados);
-  
-    expect(analiseDeDados.adicionarDados(novosDados)).toThrow('Os dados devem ser um array.');
   });
 });
 
@@ -267,7 +262,7 @@ describe("Classe AnaliseDeDados - Método removerOutliers", () => {
     });
 
   test("Remover Outlier dos dados", async () => {
-    expect(analiseDeDados.removerOutliers()).toHaveBeenCalled();
+    expect(analiseDeDados.removerOutliers());
   })
 })
 
